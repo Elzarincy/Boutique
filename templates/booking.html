@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<form action="{% url 'dresses:booking' %}" method="POST"><b>
+{% csrf_token %}
+    <br>
+    <br>
+    <h3 align="center">
+    <label>Name    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </label>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<input type="text" name="name"><br><br>
+    <label>Mobile  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </label>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="mobile"><br><br>
+    <label>Address &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  :      </label>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="address"><br><br>
+    <label>Email  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :      </label> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<input type="email" name="email"><br><br>
+        <br>
+       <input type="submit" value="Submit">
+</h3>
+</b> </form>
+{% endblock %}
